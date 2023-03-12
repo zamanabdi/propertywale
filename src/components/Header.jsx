@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <div
-      className="w-[390px] bg-white md:w-[100%] h-20px md:h-[56px] flex flex-row justify-center items-center sticky top-0 z-50"
+      className="w-[100%] bg-white md:w-[100%] h-20px md:h-[56px] flex flex-row justify-center items-center sticky top-0 z-50"
       style={{ boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.3)" }}
     >
       <header className="flex  md:h-[56px] flex-row w-[1550px] justify-between items-center px-3">
@@ -40,10 +40,10 @@ const Header = () => {
         <div className="flex flex-row md:w-[500px] h-full items-center justify-center">
           <ul className="flex bg-white md:flex-row justify-evenly items-center space-x-3 md:space-x-20 text-[14px] md:text-[1.5rem] font-semibold text-gray-500">
             <Link className={`${pathMatchRoute("/") && "text-black md:border-b-[4px] border-b-[3px] border-b-orange-600 md:border-b-orange-600"} py-[10px] md:py-[8px]`} to={"/"}>Home</Link>
-            <Link className={`${pathMatchRoute("/offers") && "text-blue-600 md:border-b-[4px] border-b-[3px] border-b-blue-600 md:border-b-blue-600"} py-[10px] md:py-[8px]`} to={"/offers"}>
+            <Link className={`${pathMatchRoute("/offers") && "text-black md:border-b-[4px] border-b-[3px] border-b-orange-600 md:border-b-orange-600"} py-[10px] md:py-[8px]`} to={"/offers"}>
               <li>Offers</li>
             </Link>
-            <Link className={`${pathMatchRoute("/sign-in") && "text-red-600 md:border-b-[4px] border-b-[3px] border-b-red-600 md:border-b-red-600"} py-[10px] md:py-[8px]`} to={"/sign-in"}>
+            <Link className={`${pathMatchRoute("/sign-in") && "text-black md:border-b-[4px] border-b-[3px] border-b-orange-600 md:border-b-orange-600"} py-[10px] md:py-[8px]`} to={"/sign-in"}>
               <li>Sign In</li>
             </Link>
           </ul>
