@@ -32,6 +32,7 @@ const OAuth = () => {
         timestamp:serverTimestamp(),
       })
     }
+    toast.success("signed up successfully");
     navigate("/");
 
     

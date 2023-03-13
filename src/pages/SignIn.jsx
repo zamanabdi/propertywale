@@ -3,8 +3,13 @@ import keyImage from "../assets/key.jpeg";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import OAuth from "../components/OAuth";
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
+import {toast} from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -21,6 +26,21 @@ const SignIn = () => {
     }));
   };
 
+  const onSubmit = async(e) => {
+    e.preventDefault();
+    try {
+      const auth = getAuth();
+      const userCredentials = await signInWithEmailAndPassword(auth,email,password)
+      if(userCredentials.user){
+        navigate("/");
+        toast.success("Signed in successfully");
+      }
+      
+    } catch (error) {
+      toast.error("Bad user credentials");
+    }
+  }
+
   return (
     <section className="text-3xl text-center mt-6">
       <h1 className="font-bold text-gray-500">Sign In</h1>
@@ -29,7 +49,7 @@ const SignIn = () => {
           <img src={keyImage} alt="keyImage" className="w-full rounded-2xl" />
         </div>
         <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20">
-          <form>
+          <form onSubmit={onSubmit}>
             <input
               type={"email"}
               placeholder={"Email address"}
