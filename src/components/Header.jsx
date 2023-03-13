@@ -1,12 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const Header = () => {
+  const [pageState,setPageState] = useState("Sign in")
+
   const location = useLocation();
   const navigate = useNavigate();
+  const auth = getAuth();
+
+  useEffect(() => {
+    onAuthStateChanged(auth,(user) => {
+      if(user){
+        setPageState("Profile");
+      }else{
+        setPageState("Sign in");
+      }
+    })
+  },[auth])
 
   // useEffect(() => {
   //    console.log(location.pathname);
@@ -43,9 +57,9 @@ const Header = () => {
             <Link className={`${pathMatchRoute("/offers") && "text-black md:border-b-[4px] border-b-[3px] border-b-orange-600 md:border-b-orange-600"} py-[10px] md:py-[8px]`} to={"/offers"}>
               <li>Offers</li>
             </Link>
-            <Link className={`${pathMatchRoute("/sign-in") && "text-black md:border-b-[4px] border-b-[3px] border-b-orange-600 md:border-b-orange-600"} py-[10px] md:py-[8px]`} to={"/sign-in"}>
-              <li>Sign In</li>
-            </Link>
+          
+              <li className={`${(pathMatchRoute("/sign-in") || pathMatchRoute("/profile")) && "text-black md:border-b-[4px] border-b-[3px] border-b-orange-600 md:border-b-orange-600"} py-[10px] md:py-[8px] cursor-pointer`} onClick={() => navigate("/profile")}>{pageState}</li>
+            
           </ul>
         </div>
       </header>
