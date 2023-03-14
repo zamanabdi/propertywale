@@ -34,7 +34,7 @@ const Header = () => {
 
   return (
     <div
-      className="w-[100%] bg-white md:w-[100%] h-20px md:h-[56px] flex flex-row justify-center items-center sticky top-0 z-50"
+      className="w-[100%] bg-white md:w-[100%] h-20px md:h-[56px] flex flex-row justify-center items-center sticky top-0 z-40"
       style={{ boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.3)" }}
     >
       <header className="flex  md:h-[56px] flex-row w-[1550px] justify-between items-center px-3">
