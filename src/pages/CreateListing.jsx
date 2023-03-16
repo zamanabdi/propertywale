@@ -153,6 +153,7 @@ const CreateListing = () => {
       imgUrls,
       geolocation,
       timestamp:serverTimestamp(),
+      userRef:auth.currentUser.uid,
     };
     delete formDataCopy.images;
     !formDataCopy.offer && delete formDataCopy.discountedPrice;
@@ -304,7 +305,7 @@ const CreateListing = () => {
           required
           className="w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:text-gray-700 focus:bg-white focus:border-slate-600 mb-6"
         />
-        {!geolocationEnabled && (
+        {geolocationEnabled && (
           <div className="flex space-x-6 justify-start mb-6">
             <div className="">
               <p className="text-lg font-semibold">Longitude</p>
