@@ -6,4 +6,12 @@ body{
     background-color: #f5f1ec;
 }
 
-/* */
+.swiper-button-next:after,.swiper-button-prev:after{
+    color: white;
+    background-color: rgba(0,0,0,0.1);
+    padding: 15px 10px;
+}
+
+.swiper-pagination-progressbar,.swiper-pagination-progressbar-fill{
+    background: white;
+}

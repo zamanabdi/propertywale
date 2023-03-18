@@ -390,7 +390,7 @@ const CreateListing = () => {
               />
               {type === "rent" && (
                 <div>
-                  <p className="text-md w-full whitespace-nowrap">$/month</p>
+                  <p className="text-md w-full whitespace-nowrap">₹/month</p>
                 </div>
               )}
             </div>
@@ -414,7 +414,7 @@ const CreateListing = () => {
                 />
                 {type === "rent" && (
                   <div>
-                    <p className="text-md w-full whitespace-nowrap">$/month</p>
+                    <p className="text-md w-full whitespace-nowrap">₹/month</p>
                   </div>
                 )}
               </div>
