@@ -4,13 +4,13 @@ import Header from "./components/Header";
 import ForgotPassword from "./pages/ForgotPassword";
 import Home from "./pages/Home";
 import Offers from "./pages/Offers";
-import PageNotFound from "./pages/PageNotFound";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import PrivateRoute from "./components/PrivateRoute";
 import "react-toastify/dist/ReactToastify.css";
 import CreateListing from "./pages/CreateListing";
+import EditListing from "./pages/EditListing";
 
 function App() {
   return (
@@ -31,7 +31,11 @@ function App() {
             <Route path="/create-listing" element={<CreateListing />} />
           </Route>
 
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="edit-listing" element={<PrivateRoute />}>
+            <Route path="/edit-listing/:listingId" element={<EditListing/>} />
+          </Route>
+
+          
         </Routes>
       </Router>
       <ToastContainer
