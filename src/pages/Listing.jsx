@@ -152,7 +152,7 @@ const Listing = () => {
           )}
         </div>
 
-        <div className="w-full h-[200px] lg:h-[400px] z-10 overflow-x-hidden mt-6 md:mt-0 md:ml-2">
+        <div className="w-full h-[200px] lg:h-[400px] z-25 overflow-x-hidden mt-6 md:mt-0 md:ml-2">
         
         <MapContainer center={[listing.latitude,listing.longitude]} zoom={13} scrollWheelZoom={false}
         style={{height:"100%",width:"100%"}}>
@@ -162,7 +162,9 @@ const Listing = () => {
         />
         <Marker position={[listing.latitude,listing.longitude]}>
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+           {
+            listing.address
+           }
           </Popup>
         </Marker>
       </MapContainer>
