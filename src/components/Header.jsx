@@ -52,7 +52,7 @@ const Header = () => {
           </span>
         </div>
         <div className="flex flex-row md:w-[500px] h-full items-center justify-center">
-          <ul className="flex bg-white md:flex-row justify-evenly items-center space-x-3 md:space-x-20 text-[10px] md:text-[1.5rem] font-semibold text-gray-500">
+          <ul className="flex bg-white md:flex-row justify-evenly items-center space-x-3 md:space-x-20 text-[14px] md:text-[1.5rem] font-semibold text-gray-500">
             <Link className={`${pathMatchRoute("/") && "text-black md:border-b-[4px] border-b-[3px] border-b-orange-600 md:border-b-orange-600"} py-[10px] md:py-[8px]`} to={"/"}>Home</Link>
             <Link className={`${pathMatchRoute("/offers") && "text-black md:border-b-[4px] border-b-[3px] border-b-orange-600 md:border-b-orange-600"} py-[10px] md:py-[8px]`} to={"/offers"}>
               <li>Offers</li>
