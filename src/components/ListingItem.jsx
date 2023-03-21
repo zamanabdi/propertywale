@@ -13,7 +13,7 @@ const ListingItem = ({ listing,id,onEdit,onDelete }) => {
         <Moment className="absolute top-2 left-2 bg-[#3377cc] text-white uppercase text-xs font-semibold rounded-md px-2 py-1 shadow-lg" fromNow>{listing.timestamp?.toDate()}</Moment>
         <div className="w-full p-[10px]">
           <div className="flex items-center space-x-1">
-            <MdLocationOn className="h-4 w-4 text-green-600" />
+            <MdLocationOn className="h-4 w-4 text-green-600 shrink-0" />
             <p className="font-semibold text-sm mb-[2px] text-gray-600 truncate">{listing.address}</p>
           </div>
           <p className="font-semibold m-0 text-xl truncate">{listing.name}</p>
