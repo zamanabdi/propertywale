@@ -100,7 +100,7 @@ import { useParams } from "react-router-dom";
             )}
           </React.Fragment>
         ) : (
-          <p>there are no current offers</p>
+          <p>there are no current {params.categoryName === "rent"? "Places for rent" : "Places for sale"}</p>
         )}
       </div>
     );
