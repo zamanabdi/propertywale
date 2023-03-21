@@ -44,10 +44,10 @@ const Header = () => {
           onClick={() => navigate("/")}
         >
           <img src={Logo} className="h-7 w-10  md:w-[75px] md:h-[50px]" />
-          <span className="flex justify-center items-center text-orange-400 text-[18px] md:text-[2rem] font-bold">
+          <span className="flex justify-center items-center text-orange-400 text-[18px] md:text-[2rem] font-bold shrink-0">
             𝒫𝓇𝑜𝓅𝑒𝓇𝓉𝓎
           </span>
-          <span className="flex items-center justify-center text-gray-500 text-[18px] md:text-[2rem] font-bold">
+          <span className="flex items-center justify-center text-gray-500 text-[18px] md:text-[2rem] font-bold shrink-0">
             𝒲𝒶𝓁𝑒
           </span>
         </div>
