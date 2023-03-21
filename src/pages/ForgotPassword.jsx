@@ -47,7 +47,7 @@ const ForgotPassword = () => {
 
             
 
-            <div className="flex flex-row justify-between items-center text-[14px] whitespace-nowrap text-sm sm:text-lg mb-6">
+            <div className="flex flex-col sm:flex-row md:flex-row justify-between items-center text-[14px] whitespace-nowrap text-sm sm:text-lg mb-6">
               <p>
                 Dont't have an account?&nbsp;
                 <Link
@@ -66,6 +66,7 @@ const ForgotPassword = () => {
                 </Link>
               </p>
             </div>
+
             <button
               className="w-full bg-blue-600 text-white px-7 py-3 text-sm font-medium uppercase rounded shadow-md hover:bg-blue-700 transition duration-150 ease-in-out hover:shadow-lg active:bg-blue-800"
               type="submit"
